@@ -124,27 +124,6 @@ When(
         cy.log("No posts available");
       }
     });
-
-    // cy.get(".orangehrm-buzz-newsfeed-noposts").then(($el) => {
-    //   /// GANTI
-    //   if ($el.is(":visible")) {
-    //     cy.log("No posts available");
-    //   } else {
-    //     cy.get(".orangehrm-buzz").each(($post) => {
-    //       cy.get($post)
-    //         .find(".orangehrm-buzz-post-actions button")
-    //         .first()
-    //         .click();
-
-    //       cy.get($post)
-    //         .find(".orangehrm-buzz-comment-add input")
-    //         .clear()
-    //         .type(`${comment}{enter}`);
-
-    //       cy.wait("@waitComments");
-    //     });
-    //   }
-    // });
   }
 );
 
@@ -158,17 +137,6 @@ Then("each post should display the comment", () => {
       cy.log("No posts available");
     }
   });
-
-  // cy.get(".orangehrm-buzz-newsfeed-noposts").then(($el) => {
-  //   /// GANTI
-  //   if ($el.is(":visible")) {
-  //     cy.log("No posts available");
-  //   } else {
-  //     cy.get(".orangehrm-buzz").each(($post) => {
-  //       cy.get($post).find(".orangehrm-comment-wrapper").should("be.visible");
-  //     });
-  //   }
-  // });
 });
 
 When("the user likes every visible posts", () => {
@@ -187,21 +155,6 @@ When("the user likes every visible posts", () => {
       cy.log("No posts available");
     }
   });
-
-  // cy.get(".orangehrm-buzz-newsfeed-noposts").then(($el) => {
-  //   /// GANTI
-  //   if ($el.is(":visible")) {
-  //     cy.log("No posts available");
-  //   } else {
-  //     cy.get(".orangehrm-buzz-post-actions > div").each(($el) => {
-  //       const hasLikeAnimation = $el.hasClass("orangehrm-like-animation");
-
-  //       if (!hasLikeAnimation) {
-  //         cy.wrap($el).click().wait("@waitLikes");
-  //       }
-  //     });
-  //   }
-  // });
 });
 
 Then("each post should show that it has been liked by the user", () => {
@@ -214,17 +167,6 @@ Then("each post should show that it has been liked by the user", () => {
       cy.log("No posts available");
     }
   });
-
-  // cy.get(".orangehrm-buzz-newsfeed-noposts").then(($el) => {
-  //   /// GANTI
-  //   if ($el.is(":visible")) {
-  //     cy.log("No posts available");
-  //   } else {
-  //     cy.get(".orangehrm-buzz-post-actions > div").each(($like) => {
-  //       cy.wrap($like).should("have.class", "orangehrm-like-animation");
-  //     });
-  //   }
-  // });
 });
 
 When("the user deletes all visible posts", () => {
@@ -266,15 +208,6 @@ When("the user deletes all visible posts", () => {
       cy.log("No posts available");
     }
   });
-
-  // cy.get(".orangehrm-buzz-newsfeed-noposts").then(($el) => {
-  //   /// GANTI
-  //   if ($el.is(":visible")) {
-  //     cy.log("No posts available");
-  //   } else {
-  //     deleteVisiblePost();
-  //   }
-  // });
 });
 
 Then("no posts should be visible on the Buzz Page", () => {
